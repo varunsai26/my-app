@@ -7,6 +7,7 @@ import { useNavigation } from '@react-navigation/native';
 const ProductCard = ({ product }) => {
   const { id,title, price, rating, description, brand, thumbnail } = product;
   const navigation = useNavigation();
+  
   return (
     <TouchableOpacity onPress={()=>navigation.navigate('ProductDetail', { id })}>
     <View style={[t.p4, t.bgWhite, t.roundedLg, t.shadow, t.m2]}>
